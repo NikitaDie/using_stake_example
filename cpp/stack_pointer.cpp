@@ -15,7 +15,7 @@ bool Stack<T*, step>::isFool() const
 }
 
 template<typename T, int step>
-void Stack<T*, step>::freeMemory() const
+void Stack<T*, step>::freeMemory()
 {
     if (this->arr != nullptr)
 
@@ -29,7 +29,7 @@ void Stack<T*, step>::freeMemory() const
 }
 
 template<typename T, int step>
-void Stack<T*, step>::relocateMemory() const
+void Stack<T*, step>::relocateMemory() 
 {
      if (this->arr == nullptr)
         {
@@ -85,7 +85,7 @@ Stack<T*, step>& Stack<T*, step>:: operator=(const Stack<T*, step> &obj)
         return *this;
 
     if (this->arr != nullptr)
-        freeMemory()
+        freeMemory();
 
     this->count = obj.count;
     this->capacity = obj.capacity;

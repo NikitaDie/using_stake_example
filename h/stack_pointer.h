@@ -13,9 +13,9 @@ private:
 
     bool isFool() const;
 
-    void freeMemory() const;
+    void freeMemory();
 
-    void relocateMemory() const;
+    void relocateMemory();
 
 public:
 

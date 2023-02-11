@@ -1,18 +1,21 @@
 #pragma once
+#include "../h/stack.h"
 
-template<typename T, int step = 5>
-class Stack
+template<typename T, int step>
+class Stack<T*, step>
 {
 private:
-        int count;
-        T* arr;
-        int capacity;
+    int count;
+    T** arr;
+    int capacity;
 
     bool isNotAllocated() const;
 
     bool isFool() const;
 
-    void relocateMemory();
+    void freeMemory() const;
+
+    void relocateMemory() const;
 
 public:
 
@@ -26,7 +29,7 @@ public:
 
     Stack& operator=(Stack&& obj);
 
-    void push(const T value);
+    void push(T* value);
 
     const T& pop();
 
@@ -41,5 +44,4 @@ public:
     void show() const;
 
     ~Stack();
-
 };

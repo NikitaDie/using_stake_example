@@ -11,6 +11,8 @@ private:
 public:
     Point(const T& new_x, const T& new_y);
 
+    Point(const Point& obj) = default;
+
     void setX(const T& new_x);
 
     void setY(const T& new_y);
